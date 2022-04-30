@@ -52,13 +52,13 @@ if __name__  == '__main__':
     try:
         path_to_wallets = config['Params']['path_to_wallets']
         is_proportionally = bool(int(config['Params']['is_proportionally']))
-        is_amount_in_decimals = bool(int(config['Params']['is_amount_in_decimals']))
-        gas_limit = int(config['Params']['gas_limit'])
+        is_amount_in_decimals = bool(int(config['Params']['is_amount_in_gwei']))
 
         provider = config['Wallet']['HTTPprovider']
         chain_id = config['Wallet']['chain_id']
         root_wallet = config['Wallet']['wallet']
         root_secret = config['Wallet']['secret']
+        gas_limit = int(config['Wallet']['gas_limit'])
 
         contract = config['Token_to_split']['contract']
         amount = float(config['Token_to_split']['amount'])  
