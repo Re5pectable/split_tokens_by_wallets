@@ -55,3 +55,21 @@ However, if you want to specify in what proportions the tokens should be sent, t
 > 0x3Address|3
 >
 Get the idea? The address is followed by the | sign and then the proportion from 1 to 999. In my example, the division is 1 to 2 to 3, that is, if I have 6000 tokens, the first address gets 1000, the second 2000, and the third 3000. Simple math: add up all the specified fractions, and divide the total number of tokens by that number.  And then individually multiply by the corresponding proportion. If you are more comfortable with percentages, there is no problem. Specify 10, 20, 70 so that the first wallet gets 10%, the second 20%, and the third 70%. But remember, the input should be numeric, no need to specify the sign of the percentage.
+
+## Example
+< [Params]
+is_proportionally=1
+is_amount_in_gwei=0
+path_to_wallets=wallets.txt
+
+[Wallet]
+HTTPprovider=https://bsc-dataseed.binance.org/
+chain_id=56
+gas_limit=200000
+wallet=0x1234567890qwertyuiop
+secret=verysecretkeyforwallet
+
+[Token_to_split]
+contract=0xC0nTr4CtT0KenT05end
+amount=1.5
+<
