@@ -14,3 +14,21 @@ This parameter indicates whether or not the amount of tokens to split is specifi
 > path_to_wallets
 >
 The path to the .txt file with the list of wallets where the tokens will be sent. The default is wallets.txt file inside the directory. I don't see the point in changing it, but it may come in handy.
+
+### Wallet
+This segment relates to getting an access to your wallet.
+> HTTPprovider
+>
+It's pretty obvious. The HTTP address of the provider. For example, to work with the wallet inside BEP20 you need https://bsc-dataseed.binance.org/
+> chain_id
+>
+An important detail without which transfers don't work. I recommend going to this site https://chainlist.org/ it has all the list you need. For Binance chain_id is 56.
+> gas_limit
+>
+Gas limit per operation. For BEP20 **200000** is enough.
+> wallet
+>
+Your wallet address.
+> secret
+>
+Secret key for your wallet.
